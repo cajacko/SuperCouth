@@ -1,0 +1,288 @@
+a {
+	cursor: pointer;	
+}
+
+.wrap {
+	margin-right: 15px;
+	margin-left: 15px;	
+}
+
+#banner {
+	position: relative;
+	display: block;
+	
+	#logo-wrap {
+		max-height: 600px;
+		overflow: hidden;
+		position: relative;
+		background-color: black;
+		
+		#logo {
+			position: absolute;
+		    width: auto;
+		    top: 0;
+		    max-height: 600px;
+		    height: 100%;
+
+		    .js & {
+		    	display: none;
+		    }
+		}
+
+		#background-img img {
+			.js & {
+				display: none;
+			}
+		}
+	}
+	
+	#site-description {
+		position: absolute;
+	    bottom: 0;
+	    width: 100%;
+	    padding: 0 15px;
+	    height: 12rem;
+
+	    @media ( max-width: @masonry-two-column-break ) {
+			height: 6rem;
+		} 
+ 
+	    h1 {
+		    margin: 0;
+		    padding: 15px;
+		    position: absolute;
+		    bottom: 0;
+		    right: 0;
+		    font-size: 3rem;
+		    line-height: 1.5;
+		    height: 100%;
+		    background-color: rgba(0, 0, 0, 0.75);
+		    color: white;
+		    font-weight: 400;
+		    width: 100%;
+
+		    @media ( max-width: @masonry-three-column-break ) {
+				font-size: 2.5rem;
+			}  
+
+			@media ( max-width: @masonry-two-column-break ) {
+				font-size: 2rem;
+				text-align: center;
+			} 
+	
+			@media ( min-width: @masonry-two-column-break ) {
+				width: 50%;	
+			}
+			
+			@media ( min-width: @masonry-three-column-break ) {
+				width: 66.66666666%;
+			}
+			
+			@media ( min-width: @masonry-four-column-break ) {
+				width: 75%;	
+			}
+			
+			@media ( min-width: @masonry-five-column-break ) {
+				width: 80%;	
+			}
+			
+			@media ( min-width: @masonry-six-column-break ) {
+				width: 83.333333%;	
+			}
+			
+			@media ( min-width: @masonry-seven-column-break ) {
+				width: 85.7142857%;	
+			}
+			
+			@media ( min-width: @masonry-eight-column-break ) {
+				width: 87.5%;	
+			}
+			
+			@media ( min-width: @masonry-nine-column-break ) {
+				width: 88.88888888%;	
+			}
+			
+			@media ( min-width: @masonry-ten-column-break ) {
+				width: 90%;	
+			}   
+		}
+	}
+}
+
+#sidebar{
+	margin-top: -1 * ( ( @global-padding / 4 ) * 3 );
+	top: -12rem;
+	position: absolute;
+
+	@media ( max-width: @masonry-two-column-break ) {
+		margin-top: 0;
+		top: 0;
+	}
+	
+	#sidebar-wrapper {
+		background-color: black;
+	    box-shadow: 0 0 10px black;
+	    z-index: 2;
+	    position: relative;
+	    
+	    #profile-pic {
+		 	width: 100%;
+		 	height: auto;   
+		}
+	    
+		nav {
+			padding: 15px;
+	
+			.list-group {
+			    text-align: center;
+			    margin-bottom: 0;
+			}
+			
+			#book-us {
+				margin-bottom: 15px;	
+			}
+			
+			#social-icons {
+				#social-icons-text {
+					display: none;
+				}
+				
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+				
+					li {
+						display: inline-block;
+						margin: 0;
+						padding: 0;
+						width: 20%;
+						border: none;
+						font-size: 1.5em;
+						
+						a {
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+main {
+	padding: ( ( @global-padding / 4 ) * 3 );
+}
+
+.post, #sidebar {
+	width: 100%;
+	
+	@media ( min-width: @masonry-two-column-break ) {
+		width: 50%;	
+	}
+	
+	@media ( min-width: @masonry-three-column-break ) {
+		width: 33.33333333%;	
+	}
+	
+	@media ( min-width: @masonry-four-column-break ) {
+		width: 25%;	
+	}
+	
+	@media ( min-width: @masonry-five-column-break ) {
+		width: 20%;	
+	}
+	
+	@media ( min-width: @masonry-six-column-break ) {
+		width: 16.666666666%;	
+	}
+	
+	@media ( min-width: @masonry-seven-column-break ) {
+		width: 14.2857%;	
+	}
+	
+	@media ( min-width: @masonry-eight-column-break ) {
+		width: 12.5%;	
+	}
+	
+	@media ( min-width: @masonry-nine-column-break ) {
+		width: 11.1111111%;	
+	}
+	
+	@media ( min-width: @masonry-ten-column-break ) {
+		width: 10%;	
+	}
+}
+
+.post {
+	padding: ( ( @global-padding / 4 ) * 3 );
+	
+	.article-container {
+		background-color: white;
+	    border: 1px solid #EAEAEA;
+	    border-radius: 5px;
+	    box-shadow: 0 0 7px #EAEAEA;
+	}
+	
+	img, figure, iframe {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	.header-title h2 {
+		margin: 0;	
+		margin-top: 0.5em;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0.5em 0;	
+	}
+	
+	img.alignleft {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	footer {
+		padding: 5px @global-padding;
+		background-color: #F5F5F5;
+		font-size: 0.8em;
+		border-top: 1px solid #E2E2E2;
+	}
+}
+
+.post-body {
+	h2 {
+		font-size: 1em;
+	}
+}
+
+#page-nav {
+	.js & {
+		display: none;
+	}
+}
+
+.loading-img {
+	display: none;
+    margin: 2em auto;
+}
+
+.responsize-embed {
+	position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+
+    img {
+    	position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    border: 0;
+    }
+}
+    
